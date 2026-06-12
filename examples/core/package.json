@@ -1,0 +1,18 @@
+{
+  "name": "@depth-examples/core",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@rekurt/depth": "file:../.."
+  },
+  "devDependencies": {
+    "vite": "^8.0.16",
+    "typescript": "~6.0.3"
+  }
+}

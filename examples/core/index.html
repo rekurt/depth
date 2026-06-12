@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>@rekurt/depth example</title>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <main class="terminal-shell">
+      <header class="topbar">
+        <section class="instrument" aria-label="Instrument">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong id="symbol-label">BTC/USDT</strong>
+            <span id="venue-label">Composite Spot</span>
+          </div>
+        </section>
+
+        <section class="controls" aria-label="Depth chart controls">
+          <label>
+            Symbol
+            <select id="symbol-select"></select>
+          </label>
+          <label>
+            Levels
+            <input id="depth-range" type="range" min="16" max="120" value="64" />
+          </label>
+          <label>
+            Skew
+            <input id="skew-range" type="range" min="-80" max="80" value="18" />
+          </label>
+          <button id="refresh-btn" type="button">Refresh</button>
+          <button id="theme-btn" type="button">Dark</button>
+        </section>
+      </header>
+
+      <section class="market-grid">
+        <section class="chart-panel" aria-label="Depth chart workspace">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">Cumulative depth</span>
+              <b>Order book liquidity curve</b>
+            </div>
+            <div class="sequence">
+              <span>SEQ</span>
+              <b id="sequence-label">-</b>
+            </div>
+          </div>
+          <div id="chart" class="chart" aria-label="Depth chart"></div>
+          <div class="status-strip">
+            <span id="hover-label">Snapshot stable | cumulative liquidity</span>
+          </div>
+        </section>
+
+        <aside class="book-panel" aria-label="Order book ladder">
+          <div class="panel-head compact">
+            <div>
+              <span class="eyebrow">Market depth</span>
+              <b>Live snapshot</b>
+            </div>
+          </div>
+
+          <div id="metrics-grid" class="metrics-grid"></div>
+
+          <div class="ladder-head">
+            <span>Price</span>
+            <span>Size</span>
+            <span>Total</span>
+          </div>
+          <div id="asks-list" class="ladder-list asks"></div>
+          <div class="spread-card">
+            <span>Spread</span>
+            <b id="spread-value">-</b>
+          </div>
+          <div id="bids-list" class="ladder-list bids"></div>
+
+          <div class="imbalance-card">
+            <div>
+              <span>Imbalance</span>
+              <b id="imbalance-value">0%</b>
+            </div>
+            <div class="imbalance-rail" aria-hidden="true">
+              <span id="imbalance-bar" class="imbalance-marker"></span>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

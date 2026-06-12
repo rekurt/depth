@@ -1,0 +1,74 @@
+{
+  "name": "@rekurt/depth",
+  "version": "0.1.0",
+  "description": "Framework-agnostic canvas order-book depth chart library.",
+  "keywords": [
+    "depth-chart",
+    "orderbook",
+    "trading",
+    "canvas",
+    "typescript"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rekurt/depth.git"
+  },
+  "homepage": "https://github.com/rekurt/depth#readme",
+  "bugs": {
+    "url": "https://github.com/rekurt/depth/issues"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "docs/assets",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "build:example": "npm run build --prefix examples/core",
+    "dev": "tsup --watch",
+    "dev:example": "npm run dev --prefix examples/core",
+    "prepack": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src examples --max-warnings 0",
+    "pack:dry-run": "npm pack --dry-run"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^25.9.1",
+    "eslint": "^9.39.4",
+    "globals": "^17.6.0",
+    "jsdom": "^29.1.1",
+    "tsup": "^8.5.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.60.1",
+    "vite": "^8.0.16",
+    "vitest": "^4.1.8"
+  }
+}

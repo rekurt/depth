@@ -1,0 +1,8 @@
+node_modules/
+dist/
+examples/**/dist/
+coverage/
+.vite/
+.playwright-mcp/
+depth-chart-*.png
+.DS_Store
