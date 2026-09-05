@@ -2,6 +2,8 @@
 
 Professional, framework-agnostic depth chart for web trading interfaces.
 
+[Project website](https://rekurt.github.io/depth/) · [All projects by rekurt](https://rekurt.github.io/projects/)
+
 <p align="center">
   <a href="https://github.com/rekurt/depth/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/rekurt/depth?style=flat-square"></a>
   <a href="https://github.com/rekurt/depth/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/rekurt/depth?style=flat-square"></a>
