@@ -19,9 +19,9 @@ interface SymbolConfig {
 }
 
 const SYMBOLS: readonly SymbolConfig[] = [
-  { id: 'BTCUSDT', label: 'BTC/USDT', venue: 'Composite Spot', basePrice: 68000, seed: 11 },
-  { id: 'ETHUSDT', label: 'ETH/USDT', venue: 'Composite Spot', basePrice: 3600, seed: 23 },
-  { id: 'SOLUSDT', label: 'SOL/USDT', venue: 'Composite Spot', basePrice: 158, seed: 37 },
+  { id: 'BTCUSDT', label: 'BTC/USDT', venue: 'Synthetic book', basePrice: 68000, seed: 11 },
+  { id: 'ETHUSDT', label: 'ETH/USDT', venue: 'Synthetic book', basePrice: 3600, seed: 23 },
+  { id: 'SOLUSDT', label: 'SOL/USDT', venue: 'Synthetic book', basePrice: 158, seed: 37 },
 ];
 
 function mulberry32(seed: number): () => number {
