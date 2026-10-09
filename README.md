@@ -65,26 +65,16 @@ serious SaaS or brokerage product without visual noise.
 
 ## Install
 
-`@rekurt/depth` is not currently published on npm. Build it from source with
-Git, Node.js 22.13+ (or 24+), and npm:
+Install the package with npm:
 
 ```bash
-git clone https://github.com/rekurt/depth.git
-cd depth
-npm ci
-npm run build
-npm pack
+npm install @rekurt/depth
 ```
 
-`npm pack` builds the library and prints the generated `.tgz` filename. In your
-application directory, install that local tarball (replace the path and filename
-with the actual output):
+ES modules, CommonJS, and TypeScript declarations are included. Node.js
+18.18+ is supported for consuming the package; building the source requires
+Node.js 22.13+ (or 24+).
 
-```bash
-npm install /absolute/path/to/depth/rekurt-depth-0.1.0.tgz
-```
-
-The imports in the quick start below then resolve to your locally built package.
 To try the source demo instead, run these commands from the `depth` checkout:
 
 ```bash
