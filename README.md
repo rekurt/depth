@@ -87,8 +87,12 @@ npm run dev:example
 ```ts
 import { DepthChart } from '@rekurt/depth';
 
+const container = document.createElement('div');
+container.style.cssText = 'width: 100%; height: 400px';
+document.body.appendChild(container);
+
 const chart = new DepthChart({
-  container: document.getElementById('depth')!,
+  container,
   theme: 'auto',
   maxLevels: 80,
   priceDomainMode: 'centered',
@@ -111,14 +115,17 @@ const chart = new DepthChart({
   },
 });
 
-chart.setData(nextOrderBookSnapshot);
+chart.setData({
+  bids: [{ price: 99, volume: 3 }, { price: 98, volume: 5 }],
+  asks: [{ price: 101, volume: 4 }, { price: 102, volume: 6 }],
+});
 chart.updateOptions({ maxLevels: 120, shape: 'linear' });
 
 const metrics = chart.getMetrics();
 console.log(metrics.spread, metrics.spreadBps, metrics.imbalance);
 
 chart.fitAll();
-chart.destroy();
+// When removing this view, call chart.destroy().
 ```
 
 The package does not ship a framework wrapper. In React/Vue/Svelte, mount the
