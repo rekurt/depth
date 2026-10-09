@@ -2,7 +2,7 @@
 
 Professional, framework-agnostic depth chart for web trading interfaces.
 
-[Project website](https://rekurt.github.io/depth/) · [All projects by rekurt](https://rekurt.github.io/projects/)
+[Project website](https://rekurt.github.io/depth/) · [Interactive demo](https://rekurt.github.io/depth/demo/) · [All projects by rekurt](https://rekurt.github.io/projects/)
 
 <p align="center">
   <a href="https://github.com/rekurt/depth/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/rekurt/depth?style=flat-square"></a>
@@ -265,6 +265,9 @@ decorative separator.
 The repository includes a vanilla Vite demo with synthetic BTC/ETH/SOL books,
 desktop/mobile layouts, a centered order-book ladder, hover inspection, and
 dark/light themes.
+
+[Try the interactive demo](https://rekurt.github.io/depth/demo/). All displayed
+prices and volumes are synthetic; the demo has no live market feed.
 
 ```bash
 npm run dev:example
