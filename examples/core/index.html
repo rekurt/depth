@@ -4,17 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <title>@rekurt/depth example</title>
+    <title>@rekurt/depth — Synthetic Order-Book Demo</title>
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
     <main class="terminal-shell">
+      <section class="project-bar" aria-label="About this demo">
+        <div class="project-info">
+          <h1>@rekurt/depth</h1>
+          <p>Synthetic order-book demo. No live market feed.</p>
+        </div>
+        <nav class="project-links" aria-label="Project resources">
+          <a href="https://github.com/rekurt/depth">GitHub</a>
+          <a href="https://github.com/rekurt/depth#quick-start">Quick start</a>
+          <a href="https://github.com/rekurt/depth#api">API</a>
+          <a href="https://github.com/rekurt/depth" class="star-link">Star on GitHub</a>
+        </nav>
+      </section>
       <header class="topbar">
         <section class="instrument" aria-label="Instrument">
           <span class="status-dot" aria-hidden="true"></span>
           <div>
             <strong id="symbol-label">BTC/USDT</strong>
-            <span id="venue-label">Composite Spot</span>
+            <span id="venue-label">Synthetic book</span>
           </div>
         </section>
 
@@ -58,7 +70,7 @@
           <div class="panel-head compact">
             <div>
               <span class="eyebrow">Market depth</span>
-              <b>Live snapshot</b>
+              <b>Synthetic snapshot</b>
             </div>
           </div>
 

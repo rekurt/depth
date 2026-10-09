@@ -65,10 +65,54 @@ select {
 
 .terminal-shell {
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr);
   gap: 10px;
   height: 100vh;
   padding: 12px;
+}
+
+.project-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  padding: 2px 2px 4px;
+}
+
+.project-info h1 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.project-info p {
+  margin: 4px 0 0;
+  color: var(--text);
+  font-size: 12px;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  color: var(--text);
+  font-size: 12px;
+  text-underline-offset: 3px;
+}
+
+.project-links .star-link {
+  color: var(--muted);
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+  color: var(--amber);
 }
 
 .topbar,
