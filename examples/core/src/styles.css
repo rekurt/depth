@@ -50,7 +50,7 @@
 
 body {
   margin: 0;
-  min-width: 360px;
+  min-width: 0;
   min-height: 100vh;
   overflow: hidden;
   background: var(--bg);
@@ -69,6 +69,12 @@ select {
   gap: 10px;
   height: 100vh;
   padding: 12px;
+}
+
+.terminal-shell > *,
+.market-grid > *,
+.chart {
+  min-width: 0;
 }
 
 .project-bar {
@@ -513,7 +519,7 @@ input[type="range"] {
   }
 
   .market-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .chart-panel {
